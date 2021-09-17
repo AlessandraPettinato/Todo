@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500&display=swap");
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    grid-template-rows: 0.5fr 2fr 0.5fr;
+}
+
+.intro,
+.toDo-container {
+    margin-top: 3rem;
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.todos {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #f87267;
+}
+
+#toDo-caption {
+    white-space: nowrap;
+    font-size: 1.5rem;
+}
+
+.toDo-container {
+    margin-top: 2rem;
+    grid-column: 2;
+    grid-row: 2;
+    justify-content: flex-start;
+    line-height: 2;
+}
+
+#toDo-icon {
+    display: block;
+    font-size: 4.5rem;
+    padding-bottom: 2rem;
+}
+
+.hide {
+    display: none;
+}
+
+.toDo-container > form {
+    margin: 3rem;
+}
+
+#day-caption {
+    white-space: nowrap;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+#add-task {
+    width: 30rem;
+    height: 2.5rem;
+    padding: 1rem;
+    border: 1px solid black;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    min-width: 20rem;
+    max-width: 30rem;
+    justify-content: space-between;
+    margin: 0.5rem;
+}
+
+#task-par {
+    font-size: 1.2rem;
+    font-weight: 350;
+    white-space: break-spaces;
+    text-align: center;
+}
+
+.form-container {
+    grid-column: 2;
+    grid-row: 3;
+    justify-self: center;
+}
+
+.remove-task {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #f87267;
+    border: 0.5px #f87267;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.completed-task {
+    text-decoration: line-through;
+}
+
+.par-container {
+    display: flex;
+    align-content: center;
+}
+
+.par-container > p {
+    margin: 2rem;
+}
+
+.unchecked {
+    align-self: center;
+    width: 1.3em;
+    height: 1.3em;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.unchecked:checked {
+    background-color: black;
+}
